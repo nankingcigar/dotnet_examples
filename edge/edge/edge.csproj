@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8FF473D-268D-4FC7-A506-2AB8E921DB9C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>edge</RootNamespace>
+    <AssemblyName>edge</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EdgeJs, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Edge.js.8.2.1\lib\net40\EdgeJs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oinq, Version=0.9.7.17799, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oinq.0.9.7\lib\net40\Oinq.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.3.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.3.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="edge\x64\edge_nativeclr.node">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="edge\x86\edge_nativeclr.node">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="node_modules\.bin\swig" />
+    <None Include="node_modules\.bin\swig.cmd" />
+    <None Include="node_modules\.bin\uglifyjs" />
+    <None Include="node_modules\.bin\uglifyjs.cmd" />
+    <None Include="node_modules\amdefine\LICENSE" />
+    <None Include="node_modules\amdefine\package.json" />
+    <None Include="node_modules\amdefine\README.md" />
+    <None Include="node_modules\async\component.json" />
+    <None Include="node_modules\async\LICENSE" />
+    <None Include="node_modules\async\package.json" />
+    <None Include="node_modules\async\README.md" />
+    <None Include="node_modules\camelcase\license" />
+    <None Include="node_modules\camelcase\package.json" />
+    <None Include="node_modules\camelcase\readme.md" />
+    <None Include="node_modules\decamelize\license" />
+    <None Include="node_modules\decamelize\package.json" />
+    <None Include="node_modules\decamelize\readme.md" />
+    <None Include="node_modules\minimist\.travis.yml" />
+    <None Include="node_modules\minimist\LICENSE" />
+    <None Include="node_modules\minimist\package.json" />
+    <None Include="node_modules\minimist\readme.markdown" />
+    <None Include="node_modules\optimist\.travis.yml" />
+    <None Include="node_modules\optimist\LICENSE" />
+    <None Include="node_modules\optimist\package.json" />
+    <None Include="node_modules\optimist\readme.markdown" />
+    <None Include="node_modules\source-map\.npmignore" />
+    <None Include="node_modules\source-map\.tern-port" />
+    <None Include="node_modules\source-map\.travis.yml" />
+    <None Include="node_modules\source-map\build\prefix-source-map.jsm" />
+    <None Include="node_modules\source-map\build\prefix-utils.jsm" />
+    <None Include="node_modules\source-map\build\suffix-source-map.jsm" />
+    <None Include="node_modules\source-map\build\suffix-utils.jsm" />
+    <None Include="node_modules\source-map\CHANGELOG.md" />
+    <None Include="node_modules\source-map\LICENSE" />
+    <None Include="node_modules\source-map\package.json" />
+    <None Include="node_modules\source-map\README.md" />
+    <None Include="node_modules\swig\.npmignore" />
+    <None Include="node_modules\swig\dist\swig.js.map" />
+    <None Include="node_modules\swig\HISTORY.md" />
+    <None Include="node_modules\swig\LICENSE" />
+    <None Include="node_modules\swig\package.json" />
+    <None Include="node_modules\swig\README.md" />
+    <None Include="node_modules\uglify-js\bin\uglifyjs" />
+    <None Include="node_modules\uglify-js\LICENSE" />
+    <None Include="node_modules\uglify-js\package.json" />
+    <None Include="node_modules\uglify-js\README.md" />
+    <None Include="node_modules\uglify-js\tools\domprops.json" />
+    <None Include="node_modules\uglify-to-browserify\.npmignore" />
+    <None Include="node_modules\uglify-to-browserify\.travis.yml" />
+    <None Include="node_modules\uglify-to-browserify\LICENSE" />
+    <None Include="node_modules\uglify-to-browserify\package.json" />
+    <None Include="node_modules\uglify-to-browserify\README.md" />
+    <None Include="node_modules\window-size\LICENSE-MIT" />
+    <None Include="node_modules\window-size\package.json" />
+    <None Include="node_modules\window-size\README.md" />
+    <None Include="node_modules\wordwrap\LICENSE" />
+    <None Include="node_modules\wordwrap\package.json" />
+    <None Include="node_modules\wordwrap\README.markdown" />
+    <None Include="node_modules\yargs\completion.sh.hbs" />
+    <None Include="node_modules\yargs\LICENSE" />
+    <None Include="node_modules\yargs\node_modules\wordwrap\.npmignore" />
+    <None Include="node_modules\yargs\node_modules\wordwrap\package.json" />
+    <None Include="node_modules\yargs\node_modules\wordwrap\README.markdown" />
+    <None Include="node_modules\yargs\package.json" />
+    <None Include="node_modules\yargs\README.md" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="edge\double_edge.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="edge\edge.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="edge\x64\node.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="edge\x86\node.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="node_modules\amdefine\amdefine.js" />
+    <Content Include="node_modules\amdefine\intercept.js" />
+    <Content Include="node_modules\async\lib\async.js" />
+    <Content Include="node_modules\camelcase\index.js" />
+    <Content Include="node_modules\decamelize\index.js" />
+    <Content Include="node_modules\minimist\example\parse.js" />
+    <Content Include="node_modules\minimist\index.js" />
+    <Content Include="node_modules\minimist\test\bool.js" />
+    <Content Include="node_modules\minimist\test\dash.js" />
+    <Content Include="node_modules\minimist\test\default_bool.js" />
+    <Content Include="node_modules\minimist\test\dotted.js" />
+    <Content Include="node_modules\minimist\test\long.js" />
+    <Content Include="node_modules\minimist\test\num.js" />
+    <Content Include="node_modules\minimist\test\parse.js" />
+    <Content Include="node_modules\minimist\test\parse_modified.js" />
+    <Content Include="node_modules\minimist\test\short.js" />
+    <Content Include="node_modules\minimist\test\whitespace.js" />
+    <Content Include="node_modules\optimist\example\bool.js" />
+    <Content Include="node_modules\optimist\example\boolean_double.js" />
+    <Content Include="node_modules\optimist\example\boolean_single.js" />
+    <Content Include="node_modules\optimist\example\default_hash.js" />
+    <Content Include="node_modules\optimist\example\default_singles.js" />
+    <Content Include="node_modules\optimist\example\divide.js" />
+    <Content Include="node_modules\optimist\example\line_count.js" />
+    <Content Include="node_modules\optimist\example\line_count_options.js" />
+    <Content Include="node_modules\optimist\example\line_count_wrap.js" />
+    <Content Include="node_modules\optimist\example\nonopt.js" />
+    <Content Include="node_modules\optimist\example\reflect.js" />
+    <Content Include="node_modules\optimist\example\short.js" />
+    <Content Include="node_modules\optimist\example\string.js" />
+    <Content Include="node_modules\optimist\example\usage-options.js" />
+    <Content Include="node_modules\optimist\example\xup.js" />
+    <Content Include="node_modules\optimist\index.js" />
+    <Content Include="node_modules\optimist\test\dash.js" />
+    <Content Include="node_modules\optimist\test\parse.js" />
+    <Content Include="node_modules\optimist\test\parse_modified.js" />
+    <Content Include="node_modules\optimist\test\short.js" />
+    <Content Include="node_modules\optimist\test\usage.js" />
+    <Content Include="node_modules\optimist\test\whitespace.js" />
+    <Content Include="node_modules\optimist\test\_.js" />
+    <Content Include="node_modules\optimist\test\_\argv.js" />
+    <Content Include="node_modules\optimist\test\_\bin.js" />
+    <Content Include="node_modules\source-map\build\assert-shim.js" />
+    <Content Include="node_modules\source-map\build\mini-require.js" />
+    <Content Include="node_modules\source-map\build\suffix-browser.js" />
+    <Content Include="node_modules\source-map\build\test-prefix.js" />
+    <Content Include="node_modules\source-map\build\test-suffix.js" />
+    <Content Include="node_modules\source-map\lib\source-map.js" />
+    <Content Include="node_modules\source-map\lib\source-map\array-set.js" />
+    <Content Include="node_modules\source-map\lib\source-map\base64-vlq.js" />
+    <Content Include="node_modules\source-map\lib\source-map\base64.js" />
+    <Content Include="node_modules\source-map\lib\source-map\binary-search.js" />
+    <Content Include="node_modules\source-map\lib\source-map\source-map-consumer.js" />
+    <Content Include="node_modules\source-map\lib\source-map\source-map-generator.js" />
+    <Content Include="node_modules\source-map\lib\source-map\source-node.js" />
+    <Content Include="node_modules\source-map\lib\source-map\util.js" />
+    <Content Include="node_modules\source-map\Makefile.dryice.js" />
+    <Content Include="node_modules\source-map\test\run-tests.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-api.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-array-set.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-base64-vlq.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-base64.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-binary-search.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-dog-fooding.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-source-map-consumer.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-source-map-generator.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-source-node.js" />
+    <Content Include="node_modules\source-map\test\source-map\test-util.js" />
+    <Content Include="node_modules\source-map\test\source-map\util.js" />
+    <Content Include="node_modules\swig\bin\swig.js" />
+    <Content Include="node_modules\swig\dist\swig.js" />
+    <Content Include="node_modules\swig\dist\swig.min.js" />
+    <Content Include="node_modules\swig\index.js" />
+    <Content Include="node_modules\swig\lib\dateformatter.js" />
+    <Content Include="node_modules\swig\lib\filters.js" />
+    <Content Include="node_modules\swig\lib\lexer.js" />
+    <Content Include="node_modules\swig\lib\loaders\filesystem.js" />
+    <Content Include="node_modules\swig\lib\loaders\index.js" />
+    <Content Include="node_modules\swig\lib\loaders\memory.js" />
+    <Content Include="node_modules\swig\lib\parser.js" />
+    <Content Include="node_modules\swig\lib\swig.js" />
+    <Content Include="node_modules\swig\lib\tags\autoescape.js" />
+    <Content Include="node_modules\swig\lib\tags\block.js" />
+    <Content Include="node_modules\swig\lib\tags\else.js" />
+    <Content Include="node_modules\swig\lib\tags\elseif.js" />
+    <Content Include="node_modules\swig\lib\tags\extends.js" />
+    <Content Include="node_modules\swig\lib\tags\filter.js" />
+    <Content Include="node_modules\swig\lib\tags\for.js" />
+    <Content Include="node_modules\swig\lib\tags\if.js" />
+    <Content Include="node_modules\swig\lib\tags\import.js" />
+    <Content Include="node_modules\swig\lib\tags\include.js" />
+    <Content Include="node_modules\swig\lib\tags\index.js" />
+    <Content Include="node_modules\swig\lib\tags\macro.js" />
+    <Content Include="node_modules\swig\lib\tags\parent.js" />
+    <Content Include="node_modules\swig\lib\tags\raw.js" />
+    <Content Include="node_modules\swig\lib\tags\set.js" />
+    <Content Include="node_modules\swig\lib\tags\spaceless.js" />
+    <Content Include="node_modules\swig\lib\utils.js" />
+    <Content Include="node_modules\uglify-js\bin\extract-props.js" />
+    <Content Include="node_modules\uglify-js\lib\ast.js" />
+    <Content Include="node_modules\uglify-js\lib\compress.js" />
+    <Content Include="node_modules\uglify-js\lib\mozilla-ast.js" />
+    <Content Include="node_modules\uglify-js\lib\output.js" />
+    <Content Include="node_modules\uglify-js\lib\parse.js" />
+    <Content Include="node_modules\uglify-js\lib\propmangle.js" />
+    <Content Include="node_modules\uglify-js\lib\scope.js" />
+    <Content Include="node_modules\uglify-js\lib\sourcemap.js" />
+    <Content Include="node_modules\uglify-js\lib\transform.js" />
+    <Content Include="node_modules\uglify-js\lib\utils.js" />
+    <Content Include="node_modules\uglify-js\tools\node.js" />
+    <Content Include="node_modules\uglify-js\tools\props.html" />
+    <Content Include="node_modules\uglify-to-browserify\index.js" />
+    <Content Include="node_modules\uglify-to-browserify\test\index.js" />
+    <Content Include="node_modules\window-size\index.js" />
+    <Content Include="node_modules\wordwrap\example\center.js" />
+    <Content Include="node_modules\wordwrap\example\meat.js" />
+    <Content Include="node_modules\wordwrap\index.js" />
+    <Content Include="node_modules\wordwrap\test\break.js" />
+    <Content Include="node_modules\wordwrap\test\idleness.txt" />
+    <Content Include="node_modules\wordwrap\test\wrap.js" />
+    <Content Include="node_modules\yargs\index.js" />
+    <Content Include="node_modules\yargs\lib\completion.js" />
+    <Content Include="node_modules\yargs\lib\parser.js" />
+    <Content Include="node_modules\yargs\lib\usage.js" />
+    <Content Include="node_modules\yargs\lib\validation.js" />
+    <Content Include="node_modules\yargs\node_modules\wordwrap\example\center.js" />
+    <Content Include="node_modules\yargs\node_modules\wordwrap\example\meat.js" />
+    <Content Include="node_modules\yargs\node_modules\wordwrap\index.js" />
+    <Content Include="node_modules\yargs\node_modules\wordwrap\test\break.js" />
+    <Content Include="node_modules\yargs\node_modules\wordwrap\test\idleness.txt" />
+    <Content Include="node_modules\yargs\node_modules\wordwrap\test\wrap.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)node_modules" "$(ProjectDir)$(OutDir)node_modules" /Y/E/D/I/F</PostBuildEvent>
+  </PropertyGroup>
+</Project>
