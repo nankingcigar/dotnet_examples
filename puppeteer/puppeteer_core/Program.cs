@@ -15,14 +15,15 @@ namespace puppeteer_core
     {
       var options = new LaunchOptions
       {
+        ExecutablePath = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
         Headless = true
       };
-      await Downloader.CreateDefault().DownloadRevisionAsync(Downloader.DefaultRevision);
+      //await Downloader.CreateDefault().DownloadRevisionAsync(Downloader.DefaultRevision);
       using (var browser = await Puppeteer.LaunchAsync(options, Downloader.DefaultRevision))
       {
         using (var page = await browser.NewPageAsync())
         {
-          await page.GoToAsync("http://www.163.com");
+          await page.GoToAsync("http://www.baidu.com");
           await page.PdfAsync("D:/1.pdf", new PdfOptions()
           {
             PrintBackground = true,
